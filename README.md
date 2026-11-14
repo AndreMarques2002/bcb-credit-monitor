@@ -61,13 +61,6 @@ Sem internet, `--source synthetic` roda tudo com **dados sintéticos** no format
 | Alerta por z-score sobre a variação mensal | Sinaliza movimentos incomuns sem pretender prever nada |
 | Só séries mensais | Evita limites da API para séries diárias e mantém a periodicidade comparável |
 
-## Limitações
-
-- **Não consegui acessar a API do Banco Central a partir do meu ambiente**, então a execução com dados reais não foi testada por mim. O que foi testado: o cliente com respostas simuladas (incluindo falhas e repetição), o SQL, as checagens e o pipeline completo com dados sintéticos no formato da API. Os códigos das séries foram conferidos no catálogo de dados abertos do BCB.
-- A execução agendada (`.github/workflows/pipeline.yml`) e a publicação no GitHub Pages **não foram testadas** por mim.
-- Os dados são **agregados do Sistema Financeiro Nacional**, não de uma instituição específica, e têm cerca de 2 meses de defasagem. O BC pode revisar valores passados.
-- Os alertas indicam variações incomuns, **não causas**. Relações entre juros e inadimplência são correlações e dependem de defasagens e de outros fatores.
-- Não há previsão, orquestrador dedicado (Airflow) nem carga em BigQuery; seriam extensões naturais.
 
 ## Estrutura
 
